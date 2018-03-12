@@ -12,5 +12,5 @@
     "NODE_ENV": "development"
   },
   "ext": "ts",
-  "exec": "ts-node ./server/bin/www.ts"
+  "exec": "ts-node -r tsconfig-paths/register $NODE_DEBUG_OPTION --project server/tsconfig.json ./server/bin/www.ts"
 }

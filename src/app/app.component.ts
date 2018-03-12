@@ -9,6 +9,8 @@ import { Store } from '@ngrx/store';
 import { IAppState } from './store';
 import { USER_GET } from './store/profile/profile.actions';
 import { ISimpleResponse } from './shared/interfaces/simple.interface';
+import { Foo } from '@my/models';
+import { Bar } from '@my/Bar';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,8 @@ import { ISimpleResponse } from './shared/interfaces/simple.interface';
 export class AppComponent implements OnInit {
 
   observable$: Observable<ISimpleResponse>;
+  foo = new Foo();
+  bar = new Bar();
 
   constructor(private http: HttpClient, private store: Store<IAppState>) {}
 
